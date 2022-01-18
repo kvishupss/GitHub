@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    
+	<aura:attribute name="var1" type="Integer"/>
+    <aura:attribute name="var2" type="Integer"/> 
+    <aura:attribute name="result" type="Integer"/> 
+    
+    <lightning:input  value = "{!v.var1}" label = "First Number"/>
+    <lightning:input  value = "{!v.var2}" label = "Second Number"/>
+    <br/>
+    <lightning:input  aura:id = "testInput" label = "First Number"/>
+    <br/>
+    <div>Result = {!v.result}</div>
+    <br/>
+    <lightning:button variant="brand" label="Add" title="Addition" onclick="{! c.add }" />
+    <lightning:button variant="brand" label="Subtract" title="Subtraction" onclick="{! c.subt }" />
+    <lightning:button variant="brand" label="Multiply" title="Multiplication" onclick="{! c.mul }" />
+    <lightning:button variant="brand" label="Divide" title="Division" onclick="{! c.div }" />
+    <lightning:button variant="success" label="Refresh" title="Refresh" onclick="{! c.ref }" />
+        
+</aura:component>

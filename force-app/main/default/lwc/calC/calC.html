@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+        <div class="slds-grid_pull-padded-large">Calculator</div>
+        <lightning-input  name="num1" onchange={inputNum1}></lightning-input>
+        <lightning-input  name="num2" onchange={inputNum2}></lightning-input>
+          <lightning-button-group> 
+        <lightning-button label="Addition" onclick={add}></lightning-button>
+            <lightning-button label="Subtract" onclick={subt}></lightning-button>
+            <lightning-button label="Multiply" onclick={mul}></lightning-button>
+            <lightning-button label="Divide" onclick={div}></lightning-button>
+            <lightning-button label="Clear" onclick={clear}></lightning-button>
+        </lightning-button-group>
+             <lightning-input label= 'Previous Result' name ="PreviousResult" read-only="true" value ="previousValue(this)"></lightning-input> 
+ 
+        <lightning-input label="Result" name="result" read-only="true" value={result}></lightning-input>
+        
+    </lightning-card>
+  </template>
